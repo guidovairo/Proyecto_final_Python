@@ -1,0 +1,17 @@
+{% extends "AppAlumno/base.html" %}
+{% load static %}
+
+{% block title %} Cuotas formulario {% endblock title %}
+
+{% block section1 %}
+
+
+{% for cuota in cuotas %}
+
+<p>
+    Cuota: {{ cuota.debe_cuotas }}
+</p>
+
+{% endfor %}
+
+{% endblock %}

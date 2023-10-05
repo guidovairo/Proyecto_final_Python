@@ -7,7 +7,7 @@ class MateriasAprobadas(models.Model):
 
 
 class Cuota(models.Model):
-   debe_cuotas = models.IntegerField()
+   debe_cuotas = models.CharField(max_length=40)
     
 
 class FinalesPrevios(models.Model):
