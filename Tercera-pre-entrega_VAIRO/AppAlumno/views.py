@@ -60,8 +60,8 @@ def buscar(request):
     return render(request, "AppAlumno/cuotasFormulario.html", {"cuota_form": cuota_form})
 
 
-def mostrar(request):
-    pass
+
+    
 
     
 
