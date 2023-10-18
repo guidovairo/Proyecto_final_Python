@@ -1,0 +1,26 @@
+{% extends "AppAlumno/base.html" %}
+{% load static %}
+
+{% block title %} Finales previos formulario {% endblock title %}
+
+
+{% block section3 %}
+<div class="col-lg-6 col-xxl-4 mb-5">
+    <div class="card bg-light border-0 h-100">
+        <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
+            <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"><i class="bi bi-card-heading"></i></div>
+            <h2 class="fs-4 fw-bold">Carga tus finales previos</h2>
+            <p class="mb-0">Vas a tener registro de los finales que tenes previos para organizarte con el estudio!</p>
+            <li class="nav-item"><a class="nav-link" href="{% url 'lista_finales' %}">Ver finales previos</a></li>
+        </div>
+    </div>
+</div>
+
+<form method="post" class="form">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <input type="submit" value="Registrar/Guardar">
+</form>
+
+{% endblock %}
+            

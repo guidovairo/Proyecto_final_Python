@@ -1,0 +1,17 @@
+{% extends "AppAlumno/base.html" %}
+{% load static %}
+
+
+
+{% block section1 %}
+
+<form action="" method="POST">
+    {% csrf_token %}
+
+    {{ form.as_p }}
+    
+    <input type="submit" value="Guardar">
+
+</form>
+
+{% endblock %}

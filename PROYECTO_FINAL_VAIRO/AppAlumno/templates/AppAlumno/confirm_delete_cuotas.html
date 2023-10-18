@@ -1,0 +1,16 @@
+{% extends "AppAlumno/base.html" %}
+{% load static %}
+
+
+
+{% block section1 %}
+
+<form action="" method="POST">
+    {% csrf_token %}
+
+    <p>Estas seguro que deseas borrar el curso "{{ object }}"?</p>
+    <input type="submit" value="Borrar">
+
+</form>
+
+{% endblock %}

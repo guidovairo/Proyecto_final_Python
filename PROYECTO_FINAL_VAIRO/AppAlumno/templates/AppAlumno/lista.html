@@ -1,0 +1,28 @@
+{% extends "AppAlumno/base.html" %}
+{% load static %}
+
+{% block section1 %}
+
+{% if object_list %}
+  <ul>
+    {% for cuota in object_list %}
+      <li>
+        {{ cuota }} 
+        <a href="{% url 'eliminar_cuotas' cuota.id %}">Eliminar</a>
+        <a href="{% url 'editar_cuotas' cuota.id %}">Editar</a>
+        <a href="{% url 'detalle_cuotas' cuota.id %}">Ver más</a> <br>
+        Importe a pagar: {{ cuota.importe_a_pagar }}
+      </li>
+    {% endfor %}
+  </ul>
+{% else %}
+  <p>No tienes deudas.</p>
+{% endif %}
+
+{% endblock %}
+
+
+
+
+
+

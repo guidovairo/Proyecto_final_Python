@@ -1,0 +1,31 @@
+{% extends "AppAlumno/base.html" %}
+{% load static %}
+
+{% block section2 %}
+
+{% if object_list %}
+  <ul>
+    {% for materia in object_list %}
+      <li>
+        {{ materia }}
+        <a href="{% url 'eliminar_materias' materia.id %}">Eliminar</a>
+        <a href="{% url 'editar_materias' materia.id %}">Editar</a>
+        <a href="{% url 'detalle_materias' materia.id %}">Ver más</a>
+        <br>
+        1er Parcial: {{ materia.Nota_primer_parcial }}<br>
+        2do Parcial: {{ materia.Nota_segundo_parcial }}<br>
+        Final: {{ materia.Nota_del_final }}<br>
+      </li>
+    {% endfor %}
+  </ul>
+{% else %}
+  <p>No tienes materias aprobadas.</p>
+{% endif %}
+
+{% endblock %}
+
+
+
+
+
+

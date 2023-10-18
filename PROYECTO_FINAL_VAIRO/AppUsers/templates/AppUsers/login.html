@@ -1,0 +1,16 @@
+{% extends "AppAlumno/base.html" %}
+{% load static %}
+
+{% block section1 %}
+
+    <h2>{{ mensaje }}</h2>
+
+
+    <form action="" method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Inciar sesión</button>
+    </form>
+
+
+{% endblock %}

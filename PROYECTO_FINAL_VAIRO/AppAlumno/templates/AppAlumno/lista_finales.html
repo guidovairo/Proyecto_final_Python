@@ -1,0 +1,28 @@
+{% extends "AppAlumno/base.html" %}
+{% load static %}
+
+
+
+{% block section3 %}
+
+{% if object_list %}
+<ul>
+    {% for final in object_list %}
+    
+        <li>{{ final }} 
+            
+            <a href="{% url 'eliminar_finales' final.id %}">Eliminar</a>
+            <a href="{% url 'editar_finales' final.id %}">Editar</a>
+            <a href="{% url 'detalle_finales' final.id %}">Ver más</a>
+    
+        </li>
+    
+    {% endfor %}
+</ul>
+{% else %}
+    <p>No tienes finales previos.</p>
+
+{% endif %}
+    
+
+{% endblock %}
